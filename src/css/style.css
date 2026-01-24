@@ -50,25 +50,25 @@
     drop-shadow(0 2px 0 white) drop-shadow(0 -2px 0 white);
 }
 
-.nav-list {
+.nav__list {
   display: flex;
   flex-direction: row;
 }
 
-.nav .nav-list li {
+.nav__item {
   padding: 1em;
 }
 
-.nav .nav-list li a {
+.nav__link {
   text-decoration: none;
   color: var(--text-color);
 }
 
-.nav .nav-list li a:hover {
+.nav__link:hover {
   color: var(--brand-blue);
 }
 
-.menu-toggle {
+.nav__toggle {
   font-size: 1.8em;
   width: 40px;
   height: 30px;
@@ -81,7 +81,7 @@
   justify-content: space-between;
 }
 
-.menu-toggle span {
+.nav__toggle-line {
   height: 4px;
   width: 100%;
   background-color: #333;
@@ -111,17 +111,17 @@
 }
 
 @media (max-width: 768px) {
-  .nav-list {
+  .nav__list {
     display: none;
   }
 
-  .menu-toggle {
+  .nav__toggle {
     display: flex;
   }
 }
 
 @media (min-width: 769px) {
-  .menu-toggle {
+  .nav__toggle {
     display: none;
   }
 }
