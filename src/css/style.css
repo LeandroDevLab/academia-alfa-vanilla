@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Send+Flowers&family=Special+Gothic+Expanded+One&display=swap");
+
+* {
+  font-family: "Roboto Mono";
+}
+:root {
+  /* Cores Puras */
+  --pure-white: #ffffff;
+  --pure-black: #000000;
+
+  /* Cores da Alfa Academia (Extraídas do logo) */
+  --brand-blue: #1a36c7;
+  --brand-silver: #a5a9b4;
+  --brand-accent1: #3b59ff; /* Azul mais vivo para realces */
+  --brand-accent2: #3a73d6; /* Azul mais vivo para realces */
+  --brand-accent3: #65a1d7; /* Azul mais vivo para realces */
+  --brand-accent4: #78b3ea; /* Azul mais vivo para realces */
+  --brand-accent5: #8cc5fd; /* Azul mais vivo para realces */
+
+  /* Tematização - Padrão Light */
+  --bg-color: var(--pure-white);
+  --text-color: var(--pure-black);
+  --surface-color: #f8f9fa; /* Um cinza bem clarinho para cards */
+  --border-color: #dddddd;
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1px 1px 5px #4d4d4d;
+  width: 100%;
+  background-color: var(--pure-white);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 1.5em;
+}
+
+.logo img {
+  width: 100px;
+  aspect-ratio: 1;
+  filter: drop-shadow(2px 0 0 white) drop-shadow(-2px 0 0 white)
+    drop-shadow(0 2px 0 white) drop-shadow(0 -2px 0 white);
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav .nav-list li {
+  padding: 1em;
+}
+
+.nav .nav-list li a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.nav .nav-list li a:hover {
+  color: var(--brand-blue);
+}
+
+.menu-toggle {
+  font-size: 1.8em;
+  width: 40px;
+  height: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-toggle span {
+  height: 4px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+/* MAIN */
+
+#home {
+  padding: 100px;
+}
+#home h1 {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+}
+
+#home h2 {
+  font-family: "Send Flowers", cursive;
+  font-weight: 100;
+}
+
+@media (max-width: 425px) {
+  .logo img {
+    width: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+}
