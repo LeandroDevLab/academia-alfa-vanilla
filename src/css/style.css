@@ -98,6 +98,16 @@
   overflow: hidden;
 }
 
+#home,
+#horarios,
+#saude,
+#suplementos,
+#galeria,
+#duvidas,
+#contato {
+  scroll-margin-top: 120px;
+}
+
 /* MAIN */
 
 #main {
