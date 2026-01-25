@@ -58,9 +58,41 @@
     </header>
 
     <main id="main">
-      <section id="home">
-        <h1>Hello word</h1>
-        <h2>Testando</h2>
+      <section class="hero" id="home">
+        <div class="hero__container">
+          <h2 class="hero__slogan">
+            "Eu sou o Alfa e o Ômega, o Primeiro e o Último, o Princípio e o
+            Fim." <span class="hero__source">Apocalipse 22:13</span>
+          </h2>
+        </div>
+        <div class="intro" id="home">
+          <div class="intro__background">
+            <img
+              src="./src/assets/images/imagem-teste.png"
+              alt="Imagem de fundo da academia (carregando vídeo)"
+              class="intro__image-fallback"
+            />
+
+            <video
+              autoplay
+              loop
+              muted
+              playsinline
+              poster="./src/assets/videos/video-teste.mp4"
+              class="intro__video-background"
+            >
+              <source
+                src="./src/assets/videos/video-teste.mp4"
+                type="video/mp4"
+              />
+              <source
+                src="./src/assets/videos/video-teste.mp4"
+                type="video/webm"
+              />
+              Seu navegador não suporta a tag de vídeo.
+            </video>
+          </div>
+        </div>
       </section>
       <section id="horarios"></section>
       <section id="saude"></section>
@@ -70,6 +102,6 @@
       <section id="contato"></section>
     </main>
     <footer id="footer"></footer>
-    <script src="./src/js/main.js"></script>
+    <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>
