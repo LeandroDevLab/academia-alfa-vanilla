@@ -98,6 +98,27 @@
   overflow: hidden;
 }
 
+/* NAV ACTIVE */
+.nav--active .nav__toggle {
+  position: relative;
+}
+
+.nav--active .nav__toggle-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.nav--active .nav__toggle-line:nth-child(1) {
+  transform: rotate(45deg);
+}
+.nav--active .nav__toggle-line:nth-child(2) {
+  opacity: 0;
+}
+.nav--active .nav__toggle-line:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
 #home,
 #horarios,
 #saude,

@@ -3,6 +3,7 @@ export class NavManager {
     this.nav = document.querySelector(".nav");
     this.button = document.querySelector(".nav__toggle");
     this.links = document.querySelectorAll(".nav__link");
+    this.toggle = document.querySelector(".nav__toggle");
     this.init();
   }
 
