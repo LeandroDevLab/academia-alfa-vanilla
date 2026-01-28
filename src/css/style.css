@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Send+Flowers&family=Special+Gothic+Expanded+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Send+Flowers&family=Special+Gothic+Expanded+One&display=swap");
 
 * {
-  font-family: "Roboto Mono";
+  font-family: "Montserrat", sans-serif;
 }
 :root {
   /* Cores Puras */
@@ -120,6 +120,7 @@
 }
 
 #home,
+#missao,
 #horarios,
 #saude,
 #suplementos,
@@ -279,6 +280,36 @@
     var(--brand-accent4)
   );
   transition: 0.3s ease-in-out;
+}
+
+/* MISSÃO E VISÃO */
+#missao {
+  display: flex;
+  flex-direction: column;
+  padding: 100px 32px;
+  gap: 32px;
+  background: linear-gradient(
+    135deg,
+    var(--brand-blue) 65%,
+    var(--brand-accent2)
+  );
+  color: var(--pure-white);
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  text-align: justify;
+}
+
+.missao__tittle {
+  text-align: center;
+}
+
+.missao__text {
+  line-height: 24px;
+}
+.missao__text-destaque {
+  font-weight: 500;
 }
 
 @media (max-width: 425px) {
