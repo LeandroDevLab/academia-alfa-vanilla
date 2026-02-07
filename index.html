@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="./src/assets/icons/alfa_favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./src/css/reset.css" />
     <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>Academia Alfa | Site Institucional</title>
   </head>
   <body>
@@ -86,11 +87,11 @@
               loop
               muted
               playsinline
-              poster="./src/assets/videos/video-teste.mp4"
+              poster="./src/assets/videos/video2333.mp4"
               class="intro__video-background"
             >
-              <source src="./src/assets/videos/video-teste.mp4" type="video/mp4" />
-              <source src="./src/assets/videos/video-teste.mp4" type="video/webm" />
+              <source src="./src/assets/videos/video2333.mp4" type="video/mp4" />
+              <source src="./src/assets/videos/video2333.mp4" type="video/webm" />
               Seu navegador não suporta a tag de vídeo.
             </video>
           </div>
@@ -160,13 +161,35 @@
         <p class="comodidades__dia">Sábado: 05:30 às 22:00</p>
       </section>
       <section id="saude"></section>
-      <section id="suplementos"></section>
+      <section id="suplementos">
+        <h1 class="suplementos__tittle">Suplementos</h1>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./src/assets/images/suplemento1.png" alt="Academia" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/assets/images/suplemento2.png" alt="Academia" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/assets/images/suplemento3.png" alt="Academia" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/assets/images/suplemento4.png" alt="Academia" />
+            </div>
+          </div>
+
+          <!-- Bolinhas -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
       <section id="galeria"></section>
       <section id="duvidas"></section>
       <section id="contato"></section>
       <section id="localizacao"></section>
     </main>
     <footer id="footer"></footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>
