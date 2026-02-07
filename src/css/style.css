@@ -51,8 +51,8 @@
 .logo img {
   width: 100px;
   aspect-ratio: 1;
-  filter: drop-shadow(2px 0 0 white) drop-shadow(-2px 0 0 white)
-    drop-shadow(0 2px 0 white) drop-shadow(0 -2px 0 white);
+  filter: drop-shadow(2px 0 0 white) drop-shadow(-2px 0 0 white) drop-shadow(0 2px 0 white)
+    drop-shadow(0 -2px 0 white);
 }
 
 .nav__list {
@@ -260,27 +260,22 @@
 }
 
 .intro__button {
+  height: 2em;
   width: 80%;
-  height: 1.6em;
   z-index: 3;
-  justify-content: right;
   font-size: clamp(1rem, 2.5vw, 1.5rem);
   border: none;
   background: linear-gradient(45deg, var(--brand-blue), var(--brand-accent2));
   border-radius: 8px;
   color: var(--pure-white);
   text-shadow: 2px 2px 2px var(--pure-black);
-  padding: 0.2em 1em;
+  padding: 0.45em 1em;
   text-decoration: none;
   text-align: center;
 }
 
 .intro__button:hover {
-  background: linear-gradient(
-    135deg,
-    var(--brand-accent3),
-    var(--brand-accent4)
-  );
+  background: linear-gradient(135deg, var(--brand-accent3), var(--brand-accent4));
   transition: 0.3s ease-in-out;
 }
 
@@ -290,11 +285,7 @@
   flex-direction: column;
   padding: 100px 32px;
   gap: 32px;
-  background: linear-gradient(
-    90deg,
-    var(--brand-blue) 65%,
-    var(--brand-accent2)
-  );
+  background: linear-gradient(90deg, var(--brand-blue) 65%, var(--brand-accent2));
   color: var(--pure-white);
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -314,6 +305,52 @@
 .missao__text-destaque {
   font-weight: 500;
 }
+
+/* DIFERENCIAL */
+
+#diferencial {
+  padding: 5em 3em;
+  background-color: var(--brand-silver);
+}
+
+.container2 {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+.diferencial__tittle {
+  font-size: 40px;
+  margin-bottom: 24px;
+}
+
+.diferencial__text {
+  font-size: 18px;
+  color: var(--text-light);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.split img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.diferencial__list {
+  margin-top: 16px;
+}
+
+.diferencial__item {
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+/* COMODIDADES */
 
 #comodidades {
   display: flex;
@@ -336,6 +373,11 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  list-style: none;
+}
+
+.comodidades__itens {
+  text-align: left;
 }
 
 .comodidades__tittle {
@@ -362,9 +404,17 @@
   .logo img {
     width: 80px;
   }
+
+  .intro__tittle {
+    font-size: 1.7em;
+  }
+
+  .diferencial {
+    padding-bottom: 30px;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .nav__list {
     position: fixed;
     top: 7em;
@@ -390,6 +440,13 @@
 
   .nav__toggle {
     display: flex;
+    margin-right: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .nav__toggle {
+    display: none;
   }
 }
 
@@ -404,8 +461,84 @@
   }
 }
 
-@media (min-width: 769px) {
-  .nav__toggle {
-    display: none;
+@media (min-width: 420px) and (max-width: 574px) {
+  .container2 {
+    padding: 50px 20px;
+  }
+
+  .diferencial {
+    padding-bottom: 30px;
+  }
+  .split img {
+    width: 90%;
+    height: auto;
+    margin: auto;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 575.98px) {
+  #diferencial {
+    margin: 0;
+    padding: 0;
+  }
+
+  .split {
+    gap: 0;
+  }
+  .split img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .split {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+/* TABLET */
+@media (min-width: 768px) {
+  .diferencial__tittle {
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .intro__text {
+    width: 555px;
+  }
+  .missao__text {
+    width: 568px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .missao__text {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+/* EXTRA LARGE DEVICES */
+@media (min-width: 1200px) {
+  section {
+    width: 1024px;
+    display: block;
+    justify-content: center;
+    padding: auto;
+    margin: auto;
+  }
+
+  .container {
+    width: 1024px;
+    padding: 0.5em 1.8em;
+    gap: 3em;
+    justify-content: center;
+    margin: auto;
   }
 }
