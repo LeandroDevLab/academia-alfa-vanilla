@@ -240,6 +240,17 @@
   margin-top: 10px;
 }
 
+.intro h1 {
+  padding: 0 32px;
+  z-index: 3;
+  color: var(--pure-white);
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+  text-shadow: 2px 2px 2px var(--pure-black);
+  letter-spacing: 2px;
+  line-height: 1.5em;
+  width: 100vw;
+}
 .intro__tittle {
   padding: 0 32px;
   z-index: 3;
@@ -249,6 +260,7 @@
   text-shadow: 2px 2px 2px var(--pure-black);
   letter-spacing: 2px;
   line-height: 1.5em;
+  width: 100vw;
 }
 
 .intro__text {
@@ -269,7 +281,6 @@
 }
 
 .intro__button {
-  height: 2em;
   width: 80%;
   z-index: 3;
   font-size: clamp(1rem, 2.5vw, 1.5rem);
@@ -278,7 +289,7 @@
   border-radius: 8px;
   color: var(--pure-white);
   text-shadow: 2px 2px 2px var(--pure-black);
-  padding: 0.45em 1em;
+  padding: 14px 1em;
   text-decoration: none;
   text-align: center;
 }
@@ -306,6 +317,7 @@
 
 .missao__tittle {
   text-align: center;
+  padding-bottom: 16px;
 }
 
 .missao__text {
@@ -389,8 +401,32 @@
   text-align: left;
 }
 
-.comodidades__tittle {
+.comodidades__subtittle {
   text-align: center;
+}
+
+.horario-funcionamento {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.horarios-lista {
+  list-style: none;
+  padding: 0;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.horarios-lista li {
+  display: flex;
+  justify-content: center;
+  width: 280px;
+  font-weight: 300;
+  gap: 5px;
 }
 
 .comodidades__subtittle {
@@ -403,10 +439,6 @@
   width: auto;
   justify-content: left;
   text-align: left;
-}
-.horario__dia {
-  text-align: center;
-  font-weight: 400;
 }
 
 /* SUPLEMENTOS */
@@ -596,6 +628,13 @@
 
   .swiper-slide img {
     height: 500px;
+  }
+}
+
+@media (max-width: 554.98px) {
+  .intro__button {
+    width: 100vw;
+    margin: 0 32px;
   }
 }
 
