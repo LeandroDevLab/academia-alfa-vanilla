@@ -240,18 +240,8 @@
   margin-top: 10px;
 }
 
-.intro h1 {
-  padding: 0 32px;
-  z-index: 3;
-  color: var(--pure-white);
-  font-family: "Special Gothic Expanded One", sans-serif;
-  font-weight: 400;
-  text-shadow: 2px 2px 2px var(--pure-black);
-  letter-spacing: 2px;
-  line-height: 1.5em;
-  width: 100vw;
-}
-.intro__tittle {
+.intro__title,
+.intro__subtitle {
   padding: 0 32px;
   z-index: 3;
   color: var(--pure-white);
@@ -263,7 +253,7 @@
   width: 100vw;
 }
 
-.intro__text {
+.intro__description {
   z-index: 3;
   padding: 16px 32px;
   color: var(--pure-white);
@@ -315,7 +305,7 @@
   justify-content: center;
 }
 
-.missao__tittle {
+.missao__title {
   text-align: center;
   padding-bottom: 16px;
 }
@@ -340,7 +330,7 @@
   padding: 0 24px;
 }
 
-.diferencial__tittle {
+.diferencial__title {
   font-size: 40px;
   margin-bottom: 24px;
 }
@@ -401,7 +391,7 @@
   text-align: left;
 }
 
-.comodidades__subtittle {
+.comodidades__subtitle {
   text-align: center;
 }
 
@@ -429,7 +419,7 @@
   gap: 5px;
 }
 
-.comodidades__subtittle {
+.comodidades__subtitle {
   font-size: 24px;
   padding: 32px 0;
 }
@@ -448,7 +438,7 @@
   padding: 100px 20px;
 }
 
-.suplementos__tittle {
+.suplementos__title {
   color: var(--pure-white);
   text-align: center;
   padding-bottom: 50px;
@@ -488,7 +478,7 @@
   text-align: center;
 }
 
-.localizacao__tittle {
+.localizacao__title {
   text-transform: uppercase;
   padding-bottom: 40px;
 }
@@ -582,7 +572,7 @@
     width: 80px;
   }
 
-  .intro__tittle {
+  .intro__subtitle {
     font-size: 1.7em;
   }
 
@@ -643,8 +633,9 @@
     width: 70%;
   }
 
-  .intro__tittle,
-  .intro__text {
+  .intro__subtitle,
+  .intro__title,
+  .intro__description {
     text-align: center;
   }
 }
@@ -689,12 +680,12 @@
 }
 /* TABLET */
 @media (min-width: 768px) {
-  .diferencial__tittle {
+  .diferencial__title {
     align-items: center;
     margin: 0 auto;
   }
 
-  .intro__text {
+  .intro__description {
     width: 555px;
   }
   .missao__text {
