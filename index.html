@@ -112,8 +112,8 @@
       </section>
       <section id="missao">
         <article>
-          <h2 class="missao__title">Missão</h2>
-          <p class="missao__text">
+          <h2 data-animate="fade-up" class="missao__title">Missão</h2>
+          <p data-animate="fade-up" class="missao__text">
             Proporcionar um ambiente acolhedor e motivador, promovendo assim mais saúde e bem estar
             a todos nossos alunos, garantindo um serviço de alta qualidade, através do exercício
             físico.
@@ -121,8 +121,8 @@
         </article>
 
         <article>
-          <h2 class="missao__title">Visão</h2>
-          <p class="missao__text">
+          <h2 data-animate="fade-up" class="missao__title">Visão</h2>
+          <p data-animate="fade-up" class="missao__text">
             Ser referência no mercado de academia, sendo conhecida pela excelência no atendimento e
             na transformação de vidas. Vai além de um negócio, é verdadeiramente
             <span class="missao__text-destaque">um propósito 🤍</span>.
@@ -132,11 +132,12 @@
       <section id="diferencial">
         <div class="container2 split">
           <img
+            data-animate="slide-left"
             src="./src/assets/images/diferencial.png"
             alt="Imagem de um profissional de Educação Física orientando uma aluna"
           />
 
-          <div class="diferencial">
+          <div data-animate="slide-leftt" class="diferencial">
             <h2 class="diferencial__title">Aqui você não é só mais um aluno.</h2>
             <p class="diferencial__text">
               Treinos personalizados e acompanhamento próximo para garantir sua evolução.
@@ -144,13 +145,25 @@
             <ul class="diferencial__list">
               <!-- usando transition-delay para aumentar o efeito,
              dando atraso entre os ítens -->
-              <li class="diferencial__item" data-animate="rotate" style="transition-delay: 0.1s">
+              <li
+                class="diferencial__item"
+                data-animate="slide-left"
+                style="transition-delay: 0.3s"
+              >
                 ✅ Acompanhamento profissional
               </li>
-              <li class="diferencial__item" data-animate="rotate" style="transition-delay: 0.3s">
+              <li
+                class="diferencial__item"
+                data-animate="slide-left"
+                style="transition-delay: 0.5s"
+              >
                 ✅ Treino personalizado
               </li>
-              <li class="diferencial__item" data-animate="rotate" style="transition-delay: 0.5s">
+              <li
+                class="diferencial__item"
+                data-animate="slide-left"
+                style="transition-delay: 0.7s"
+              >
                 ✅ Ambiente motivador
               </li>
             </ul>
@@ -185,48 +198,89 @@
           <h3 class="comodidades__subtitle">Horários</h3>
 
           <ul class="horarios-lista">
-            <li data-day="1" data-open="05:30" data-close="22:00">
+            <li
+              data-animate="rotate"
+              style="transition-delay: 0.3s"
+              data-day="1"
+              data-open="05:30"
+              data-close="22:00"
+            >
               <span>Segunda:</span>
               <time datetime="05:30">05:30</time> às
               <time datetime="22:00">22:00</time>
             </li>
 
-            <li data-day="2" data-open="05:30" data-close="22:00">
+            <li
+              data-animate="rotate"
+              style="transition-delay: 0.5s"
+              data-day="2"
+              data-open="05:30"
+              data-close="22:00"
+            >
               <span>Terça:</span>
               <time datetime="05:30">05:30</time> às
               <time datetime="22:00">22:00</time>
             </li>
-            <li data-day="3" data-open="05:30" data-close="22:00">
+            <li
+              data-animate="rotate"
+              style="transition-delay: 0.7s"
+              data-day="3"
+              data-open="05:30"
+              data-close="22:00"
+            >
               <span>Quarta:</span>
               <time datetime="05:30">05:30</time> às
               <time datetime="22:00">22:00</time>
             </li>
-            <li data-day="4" data-open="05:30" data-close="22:00">
+            <li
+              data-animate="rotate"
+              style="transition-delay: 0.9s"
+              data-day="4"
+              data-open="05:30"
+              data-close="22:00"
+            >
               <span>Quinta:</span>
               <time datetime="05:30">05:30</time> às
               <time datetime="22:00">22:00</time>
             </li>
-            <li data-day="5" data-open="05:30" data-close="22:00">
+            <li
+              data-animate="rotate"
+              style="transition-delay: 1.1s"
+              data-day="5"
+              data-open="05:30"
+              data-close="22:00"
+            >
               <span>Sexta:</span>
               <time datetime="05:30">05:30</time> às
               <time datetime="22:00">22:00</time>
             </li>
-            <li data-day="6" data-open="08:00" data-close="20:00">
+            <li
+              data-animate="rotate"
+              style="transition-delay: 1.3s"
+              data-day="6"
+              data-open="08:00"
+              data-close="20:00"
+            >
               <span>Sábado:</span>
               <time datetime="08:00">08:00</time> às
               <time datetime="20:00">20:00</time>
             </li>
-            <li data-day="0" data-closed="true">
+            <li
+              data-animate="rotate"
+              style="transition-delay: 1.5s"
+              data-day="0"
+              data-closed="true"
+            >
               <span>Domingo:</span>
-              <strong>Fechado</strong>
+              Fechado
             </li>
           </ul>
         </section>
       </section>
       <!-- <section id="saude"></section> -->
       <section id="suplementos">
-        <h2 class="suplementos__title">Suplementos</h2>
-        <div class="swiper">
+        <h2 data-animate="zoom" class="suplementos__title">Suplementos</h2>
+        <div data-animate="zoom" class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <img src="./src/assets/images/suplemento1.png" alt="Imagem de uma creatina" />
@@ -253,12 +307,15 @@
       <section id="duvidas"></section>
       <section id="contato"></section> -->
       <section id="localizacao">
-        <h2 class="localizacao__title">Localização</h2>
-        <address class="localizacao__text">
+        <h2 data-animate="fade-down" class="localizacao__title">Localização</h2>
+        <address data-animate="fade-down" class="localizacao__text">
           R. Juscelino Kubitscheck, 103 b, Esperança - PB, 58135-000
         </address>
-        <p class="localizacao__text">Próximo ao Hospital Municipal de Esperança</p>
+        <p data-animate="fade-down" class="localizacao__text">
+          Próximo ao Hospital Municipal de Esperança
+        </p>
         <iframe
+          data-animate="fade-down"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.9277209309666!2d-35.86401192422646!3d-7.017782268747104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ac2968f90666eb%3A0x9cb9fc14974d6202!2sAlfa%20Academia!5e0!3m2!1spt-BR!2sbr!4v1770433596178!5m2!1spt-BR!2sbr"
           width="600"
           height="450"
@@ -268,6 +325,7 @@
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
         <a
+          data-animate="zoom"
           href="https://www.google.com/maps/dir/?api=1&destination=-7.0177876,-35.861437"
           target="_blank"
           rel="noopener noreferrer"

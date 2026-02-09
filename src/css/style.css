@@ -11,16 +11,16 @@
   /* Cores da Alfa Academia (Extraídas do logo) */
   --brand-blue: #1a36c7;
   --brand-silver: #a5a9b4;
-  --brand-accent1: #3b59ff; /* Azul mais vivo para realces */
-  --brand-accent2: #3a73d6; /* Azul mais vivo para realces */
-  --brand-accent3: #65a1d7; /* Azul mais vivo para realces */
-  --brand-accent4: #78b3ea; /* Azul mais vivo para realces */
-  --brand-accent5: #8cc5fd; /* Azul mais vivo para realces */
+  --brand-accent1: #3b59ff;
+  --brand-accent2: #3a73d6;
+  --brand-accent3: #65a1d7;
+  --brand-accent4: #78b3ea;
+  --brand-accent5: #8cc5fd;
 
   /* Tematização - Padrão Light */
   --bg-color: var(--pure-white);
   --text-color: var(--pure-black);
-  --surface-color: #f8f9fa; /* Um cinza bem clarinho para cards */
+  --surface-color: #f8f9fa;
   --border-color: #dddddd;
 }
 
@@ -570,6 +570,60 @@
 .footer-social i {
   font-size: 1.7rem;
   color: var(--pure-white);
+}
+
+/* DATA - ANIMATE */
+
+[data-animate] {
+  opacity: 0;
+  transition: all 1s ease;
+}
+/* BASE */
+.animated {
+  opacity: 1;
+}
+
+/* FADE-UP */
+[data-animate="fade-up"] {
+  transform: translateY(140px);
+}
+[data-animate="fade-up"].animated {
+  transform: translateY(0);
+}
+
+/* FADE-DOWN */
+[data-animate="fade-down"] {
+  transform: translateY(-140px);
+}
+[data-animate="fade-down"].animated {
+  transform: translateY(0);
+}
+
+/* SLIDE-LEFT */
+
+[data-animate="slide-left"] {
+  transform: translateX(-160px);
+}
+[data-animate="slide-left"].animated {
+  transform: translateX(0px);
+}
+
+/* SCALE */
+
+[data-animate="zoom"] {
+  transform: scale(0.8);
+}
+[data-animate="zoom"].animated {
+  transform: scale(1);
+}
+
+/* ROTATE */
+
+[data-animate="rotate"] {
+  transform: rotate(-10deg) scale(0.9);
+}
+[data-animate="rotate"].animated {
+  transform: rotate(0) scale(1);
 }
 
 @media (max-width: 425px) {

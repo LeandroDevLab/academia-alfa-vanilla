@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // new MobileMenu();
 });
 
+/* Galeria Swiper */
 const swiper = new Swiper(".swiper", {
   loop: true,
 
@@ -30,3 +31,25 @@ const swiper = new Swiper(".swiper", {
     },
   },
 });
+
+/*  */
+// Observer para iniciar só quando aparecer na tela
+const animationObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+
+      const el = entry.target;
+
+      el.classList.add("animated");
+
+      // para de observar depois de animar
+      observer.unobserve(el);
+    });
+  },
+  {
+    threshold: 0.4,
+  },
+);
+
+document.querySelectorAll("[data-animate]").forEach((el) => animationObserver.observe(el));
