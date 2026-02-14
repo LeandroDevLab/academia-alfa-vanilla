@@ -430,6 +430,10 @@
   gap: 5px;
 }
 
+.horarios-lista .gym-today {
+  font-weight: 600;
+}
+
 .comodidades__subtitle {
   font-size: 24px;
   padding: 32px 0;

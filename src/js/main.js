@@ -60,3 +60,17 @@ document.querySelectorAll("[data-animate]").forEach((el) => animationObserver.ob
 [] Manipular a DOM de acordo com a resposta anterior
 [] 
 */
+const weekDay = document.querySelectorAll("[data-day]");
+
+function focusWeekDay() {
+  const today = new Date();
+
+  weekDay.forEach((item) => {
+    if (item.dataset.day == today.getDay()) {
+      item.classList.toggle("gym-today");
+      const itemContent = item.innerHTML;
+      item.innerHTML = `HOJE <i class="fa-solid fa-arrow-right"></i> ${itemContent}`;
+    }
+  });
+}
+focusWeekDay();
