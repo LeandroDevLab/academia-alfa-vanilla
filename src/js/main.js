@@ -53,3 +53,10 @@ const animationObserver = new IntersectionObserver(
 );
 
 document.querySelectorAll("[data-animate]").forEach((el) => animationObserver.observe(el));
+
+/* Fortalecendo a base
+[] Pegar data atual Date.now()
+[] Verificar qual o dia da semana
+[] Manipular a DOM de acordo com a resposta anterior
+[] 
+*/
