@@ -27,6 +27,13 @@ function initSwiper() {
 
     loop: true,
 
+    // CONFIGURAÇÃO DO AUTOPLAY
+    autoplay: {
+      delay: 3000, // Tempo em milissegundos (3 segundos)
+      disableOnInteraction: false, // Continua rodando mesmo se o usuário clicar/arrastar
+      pauseOnMouseEnter: true, // Pausa o carrossel quando o mouse estiver em cima
+    },
+
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
