@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* Galeria Swiper */
 const swiper = new Swiper(".swiper", {
+  initialSlide: 1, // Começa no segundo slide
   slidesPerView: 1.3, //quantos slides por vez cabem na tela
 
   centeredSlides: true, //centralizando slide atual
@@ -58,12 +59,7 @@ const animationObserver = new IntersectionObserver(
 
 document.querySelectorAll("[data-animate]").forEach((el) => animationObserver.observe(el));
 
-/* Fortalecendo a base
-[] Pegar data atual Date.now()
-[] Verificar qual o dia da semana
-[] Manipular a DOM de acordo com a resposta anterior
-[] 
-*/
+/*  ============= DATA DINÂMICA =======================*/
 const weekDay = document.querySelectorAll("[data-day]");
 
 function focusWeekDay() {
@@ -145,3 +141,14 @@ suplementos.forEach((item) => {
 
 gridSuplementos.innerHTML = conteudo;
 /* ============================================================================= */
+/* ========== 3. FAQ ACORDEÃO ========== */
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach((item) => {
+  const question = item.querySelector(".faq-question");
+  question.addEventListener("click", function () {
+    const isActive = item.classList.contains("active");
+    faqItems.forEach((otherItem) => otherItem.classList.remove("active"));
+    if (!isActive) item.classList.add("active");
+  });
+});
