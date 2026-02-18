@@ -1,68 +1,77 @@
 import { IntroManager } from "./IntroManager.js";
 import { NavManager } from "./NavManager.js";
 
+// =================== QUANDO A PÁGINA INICIAR ====================
 document.addEventListener("DOMContentLoaded", () => {
   // Inicializa o gerenciador da intro
   new IntroManager();
   new NavManager();
 
+  renderSuplementos();
+  initSwiper();
+  initAnimations();
+  focusWeekDay();
+  initFaq();
   // Futuramente, você inicializa outros aqui:
   // new FormHandler();
   // new MobileMenu();
 });
 
-/* Galeria Swiper */
-const swiper = new Swiper(".swiper", {
-  initialSlide: 1, // Começa no segundo slide
-  slidesPerView: 1.3, //quantos slides por vez cabem na tela
+/* ========= Galeria Swiper ========== */
+function initSwiper() {
+  new Swiper(".swiper", {
+    initialSlide: 1, // Começa no segundo slide
+    slidesPerView: 1.3, //quantos slides por vez cabem na tela
 
-  centeredSlides: true, //centralizando slide atual
+    centeredSlides: true, //centralizando slide atual
 
-  loop: true,
+    loop: true,
 
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-
-  spaceBetween: 20,
-
-  breakpoints: {
-    768: {
-      slidesPerView: 2.2,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
     },
-    1024: {
-      slidesPerView: 3.5,
+
+    spaceBetween: 20,
+
+    breakpoints: {
+      768: {
+        slidesPerView: 2.2,
+      },
+      1024: {
+        slidesPerView: 3.5,
+      },
     },
-  },
-});
+  });
+}
 
-/*  */
-// Observer para iniciar só quando aparecer na tela
-const animationObserver = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
+// ========== Observer para iniciar só quando aparecer na tela ==========
+function initAnimations() {
+  const animationObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
 
-      const el = entry.target;
+        const el = entry.target;
 
-      el.classList.add("animated");
+        el.classList.add("animated");
 
-      // para de observar depois de animar
-      observer.unobserve(el);
-    });
-  },
-  {
-    threshold: 0.4,
-  },
-);
+        // para de observar depois de animar
+        observer.unobserve(el);
+      });
+    },
+    {
+      threshold: 0.4,
+    },
+  );
 
-document.querySelectorAll("[data-animate]").forEach((el) => animationObserver.observe(el));
+  document.querySelectorAll("[data-animate]").forEach((el) => animationObserver.observe(el));
+}
 
-/*  ============= DATA DINÂMICA =======================*/
-const weekDay = document.querySelectorAll("[data-day]");
+//  ========== DATA DINÂMICA ==========
 
 function focusWeekDay() {
+  const weekDay = document.querySelectorAll("[data-day]");
   const today = new Date();
 
   weekDay.forEach((item) => {
@@ -73,7 +82,6 @@ function focusWeekDay() {
     }
   });
 }
-focusWeekDay();
 
 /* ============================================================================= */
 /* ================= Preenchimento dinâmico dos suplementos ==================== */
@@ -109,20 +117,22 @@ const suplementos = [
   },
 ];
 
-const gridSuplementos = document.querySelector(".swiper-wrapper");
+// ========== RENDERIZAR SUPLEMENTOS ==========
+function renderSuplementos() {
+  const gridSuplementos = document.querySelector(".swiper-wrapper");
 
-function transformCurrency(value) {
-  const moeda = new Intl.NumberFormat("pt-BR", {
-    style: "currency",
-    currency: "BRL",
-  }).format(value);
-  return moeda;
-}
+  function transformCurrency(value) {
+    const moeda = new Intl.NumberFormat("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+    }).format(value);
+    return moeda;
+  }
 
-let conteudo = "";
+  let conteudo = "";
 
-suplementos.forEach((item) => {
-  conteudo += `
+  suplementos.forEach((item) => {
+    conteudo += `
   <div class="swiper-slide">
               <img src="./src/assets/images/bg-img-suplemento2.png" alt="Imagem de uma creatina" />
               <div class="swiper-slide-content">
@@ -137,18 +147,21 @@ suplementos.forEach((item) => {
               </div>
   </div>
 `;
-});
-
-gridSuplementos.innerHTML = conteudo;
-/* ============================================================================= */
-/* ========== 3. FAQ ACORDEÃO ========== */
-const faqItems = document.querySelectorAll(".faq-item");
-
-faqItems.forEach((item) => {
-  const question = item.querySelector(".faq-question");
-  question.addEventListener("click", function () {
-    const isActive = item.classList.contains("active");
-    faqItems.forEach((otherItem) => otherItem.classList.remove("active"));
-    if (!isActive) item.classList.add("active");
   });
-});
+
+  gridSuplementos.innerHTML = conteudo + conteudo;
+}
+
+/* ========== FAQ ACORDEÃO ========== */
+function initFaq() {
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach((item) => {
+    const question = item.querySelector(".faq-question");
+    question.addEventListener("click", function () {
+      const isActive = item.classList.contains("active");
+      faqItems.forEach((otherItem) => otherItem.classList.remove("active"));
+      if (!isActive) item.classList.add("active");
+    });
+  });
+}
