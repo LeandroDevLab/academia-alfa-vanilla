@@ -303,7 +303,7 @@
   transition: 0.3s ease-in-out;
 }
 
-/* MISSÃO E VISÃO */
+/* ============================ MISSÃO E VISÃO =============================== */
 #missao {
   display: flex;
   flex-direction: column;
@@ -331,7 +331,7 @@
   font-weight: 500;
 }
 
-/* DIFERENCIAL */
+/* =============================== DIFERENCIAL =========================== */
 
 #diferencial {
   padding: 5rem 3rem;
@@ -342,6 +342,12 @@
   max-width: 1200px;
   margin: auto;
   padding: 0 24px;
+}
+
+.diferencial {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .diferencial__title {
@@ -363,11 +369,12 @@
 
 .split img {
   width: 100%;
+  height: auto;
   border-radius: 16px;
 }
 
-.diferencial__list {
-  margin-top: 16px;
+.diferencial__list i {
+  filter: drop-shadow(1px 1px 2px var(--pure-white));
 }
 
 .diferencial__item {
@@ -375,7 +382,22 @@
   list-style: none;
 }
 
-/* COMODIDADES */
+.diferencial__cta {
+  text-decoration: none;
+  background-color: #1a36c7;
+  color: var(--pure-white);
+  font-weight: 600;
+  border-radius: 24px;
+  padding: 10px 20px;
+  width: 260px;
+}
+
+.diferencial__cta span {
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* ========================== COMODIDADES =============================== */
 
 #comodidades {
   display: flex;
@@ -486,7 +508,7 @@
   text-align: left;
 }
 
-/* SUPLEMENTOS */
+/* ================================= SUPLEMENTOS ==================================*/
 
 #suplementos {
   background-color: var(--brand-blue);
@@ -759,6 +781,10 @@
   .diferencial {
     padding-bottom: 30px;
   }
+
+  .container2 {
+    padding: 40px 20px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -788,6 +814,11 @@
   .nav__toggle {
     display: flex;
     margin-right: 10px;
+  }
+
+  .split {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
   }
 }
 
@@ -852,7 +883,7 @@
   }
 
   .split {
-    gap: 0;
+    gap: 30px;
   }
   .split img {
     width: 100%;
@@ -861,12 +892,6 @@
   }
 }
 
-@media (max-width: 767.98px) {
-  .split {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-}
 /* TABLET */
 @media (min-width: 768px) {
   .diferencial__title {
